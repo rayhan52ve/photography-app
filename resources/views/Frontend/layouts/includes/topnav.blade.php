@@ -11,12 +11,12 @@
 
             <nav id="navbar" class="navbar">
                 <ul>
-                    <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li class="dropdown"><a href="#"><span>Gallery</span> <i
+                    <li><a href="{{route('front.home')}}" class="{{url()->current() == route('front.home') ? 'active':'' }}">Home</a></li>
+                    <li><a href="{{route('front.about')}}" class="{{url()->current() == route('front.about') ? 'active':'' }}">About</a></li>
+                    <li class="dropdown"><a href="#" class="{{url()->current() == route('front.gallery') ? 'active':'' }}"><span>Gallery</span> <i
                                 class="bi bi-chevron-down dropdown-indicator"></i></a>
                         <ul>
-                            <li><a href="gallery.html">Nature</a></li>
+                            <li><a href="{{route('front.gallery')}}" class="{{url()->current() == route('front.gallery') ? 'active':'' }}">Nature</a></li>
                             <li><a href="gallery.html">People</a></li>
                             <li><a href="gallery.html">Architecture</a></li>
                             <li><a href="gallery.html">Animals</a></li>
@@ -32,8 +32,8 @@
                             </li>
                         </ul>
                     </li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    {{-- <li><a href="{{route('front.services')}}">Services</a></li> --}}
+                    <li><a href="{{route('front.contact')}}" class="{{url()->current() == route('front.contact') ? 'active':'' }}">Contact</a></li>
                 </ul>
             </nav><!-- .navbar -->
 
