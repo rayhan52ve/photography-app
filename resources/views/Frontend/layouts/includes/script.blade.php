@@ -7,3 +7,11 @@
 
     <!-- Template Main JS File -->
     <script src="{{ asset('frontend/assets/js/main.js') }}"></script>
+
+    {{-- slide carousel --}}
+    <script src="{{asset('frontend/carousel/js/jquery.min.js')}}"></script>
+    <script src="{{asset('frontend/carousel/js/popper.js')}}"></script>
+    <script src="{{asset('frontend/carousel/js/bootstrap.min.js')}}"></script>
+    <script src="{{asset('frontend/carousel/js/owl.carousel.min.js')}}"></script>
+    <script src="{{asset('frontend/carousel/js/main.js')}}"></script>
+    {{-- slide carousel --}}
