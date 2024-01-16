@@ -10,7 +10,7 @@
             <h2>About</h2>
             <p>Odio et unde deleniti. Deserunt numquam exercitationem. Officiis quo odio sint voluptas consequatur ut a odio voluptatem. Sit dolorum debitis veritatis natus dolores. Quasi ratione sint. Sit quaerat ipsum dolorem.</p>
 
-            <a class="cta-btn" href="contact.html">Available for hire</a>
+            {{-- <a class="cta-btn" href="contact.html">Available for hire</a> --}}
 
           </div>
         </div>
