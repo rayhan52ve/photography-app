@@ -24,7 +24,7 @@ class FrontendController extends Controller
 
     public function gallerySingle()
     {
-        return view('Frontend.modules.gallery-single');
+        return view('Frontend.modules.gallery_single');
     }
 
     public function services()

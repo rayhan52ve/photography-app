@@ -11,29 +11,15 @@
 
             <nav id="navbar" class="navbar">
                 <ul>
-                    <li><a href="{{route('front.home')}}" class="{{url()->current() == route('front.home') ? 'active':'' }}">Home</a></li>
-                    <li><a href="{{route('front.about')}}" class="{{url()->current() == route('front.about') ? 'active':'' }}">About</a></li>
-                    <li class="dropdown"><a href="#" class="{{url()->current() == route('front.gallery') ? 'active':'' }}"><span>Gallery</span> <i
-                                class="bi bi-chevron-down dropdown-indicator"></i></a>
-                        <ul>
-                            <li><a href="{{route('front.gallery')}}" class="{{url()->current() == route('front.gallery') ? 'active':'' }}">Nature</a></li>
-                            <li><a href="gallery.html">People</a></li>
-                            <li><a href="gallery.html">Architecture</a></li>
-                            <li><a href="gallery.html">Animals</a></li>
-                            <li><a href="gallery.html">Sports</a></li>
-                            <li><a href="gallery.html">Travel</a></li>
-                            <li class="dropdown"><a href="#"><span>Sub Menu</span> <i
-                                        class="bi bi-chevron-down dropdown-indicator"></i></a>
-                                <ul>
-                                    <li><a href="#">Sub Menu 1</a></li>
-                                    <li><a href="#">Sub Menu 2</a></li>
-                                    <li><a href="#">Sub Menu 3</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
+                    <li><a href="{{ route('front.home') }}"
+                            class="{{ url()->current() == route('front.home') ? 'active' : '' }}">Home</a></li>
+                    <li><a href="{{ route('front.about') }}"
+                            class="{{ url()->current() == route('front.about') ? 'active' : '' }}">Bio</a></li>
+                    <li><a href="{{ route('front.gallery') }}"
+                            class="{{ url()->current() == route('front.gallery') ? 'active' : '' }}">Gallery</a></li>
                     {{-- <li><a href="{{route('front.services')}}">Services</a></li> --}}
-                    <li><a href="{{route('front.contact')}}" class="{{url()->current() == route('front.contact') ? 'active':'' }}">Contact</a></li>
+                    <li><a href="{{ route('front.contact') }}"
+                            class="{{ url()->current() == route('front.contact') ? 'active' : '' }}">Contact</a></li>
                 </ul>
             </nav><!-- .navbar -->
 
