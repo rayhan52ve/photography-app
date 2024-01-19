@@ -19,12 +19,61 @@
                 <div class="row gy-5 justify-content-start">
 
                     <div class="col-xl-3 col-lg-4 col-md-6">
-                        <a href="{{ asset('frontend/assets/img/gallery/gallery-1.jpg') }}" title="Gallery 1"
+                        <a href="{{ asset('frontend/assets/img/gallery/gallery-1.jpg') }}" title="SRPhotography"
                             class="glightbox preview-link">
                             <div class="gallery-item h-100">
                                 <img src="{{ asset('frontend/assets/img/gallery/gallery-1.jpg') }}" class="img-fluid"
                                     alt="">
-                                <p class="pt-2">Image Name</p>
+                            </div>
+                        </a>
+                    </div><!-- End Gallery Item -->
+
+                    <div class="col-xl-3 col-lg-4 col-md-6">
+                        <a href="{{ asset('frontend/assets/img/gallery/gallery-1.jpg') }}" title="SRPhotography"
+                            class="glightbox preview-link">
+                            <div class="gallery-item h-100">
+                                <img src="{{ asset('frontend/assets/img/gallery/gallery-1.jpg') }}" class="img-fluid"
+                                    alt="">
+                            </div>
+                        </a>
+                    </div><!-- End Gallery Item -->
+
+                    <div class="col-xl-3 col-lg-4 col-md-6">
+                        <a href="{{ asset('frontend/assets/img/gallery/gallery-1.jpg') }}" title="SRPhotography"
+                            class="glightbox preview-link">
+                            <div class="gallery-item h-100">
+                                <img src="{{ asset('frontend/assets/img/gallery/gallery-1.jpg') }}" class="img-fluid"
+                                    alt="">
+                            </div>
+                        </a>
+                    </div><!-- End Gallery Item -->
+
+                    <div class="col-xl-3 col-lg-4 col-md-6">
+                        <a href="{{ asset('frontend/assets/img/gallery/gallery-1.jpg') }}" title="SRPhotography"
+                            class="glightbox preview-link">
+                            <div class="gallery-item h-100">
+                                <img src="{{ asset('frontend/assets/img/gallery/gallery-1.jpg') }}" class="img-fluid"
+                                    alt="">
+                            </div>
+                        </a>
+                    </div><!-- End Gallery Item -->
+
+                    <div class="col-xl-3 col-lg-4 col-md-6">
+                        <a href="{{ asset('frontend/assets/img/gallery/gallery-1.jpg') }}" title="SRPhotography"
+                            class="glightbox preview-link">
+                            <div class="gallery-item h-100">
+                                <img src="{{ asset('frontend/assets/img/gallery/gallery-1.jpg') }}" class="img-fluid"
+                                    alt="">
+                            </div>
+                        </a>
+                    </div><!-- End Gallery Item -->
+
+                    <div class="col-xl-3 col-lg-4 col-md-6">
+                        <a href="{{ asset('frontend/assets/img/gallery/gallery-1.jpg') }}" title="SRPhotography"
+                            class="glightbox preview-link">
+                            <div class="gallery-item h-100">
+                                <img src="{{ asset('frontend/assets/img/gallery/gallery-1.jpg') }}" class="img-fluid"
+                                    alt="">
                             </div>
                         </a>
                     </div><!-- End Gallery Item -->
