@@ -182,14 +182,16 @@
                     Settings
                 </span>
             </li>
-            <a href="{{ route('logout') }}">
-                <li class="mdl-menu__item mdl-list__item">
+            <form method="POST" action="{{ route('logout') }}">
+                @csrf
+                <button type="submit" class="mdl-menu__item mdl-list__item"
+                    style="border: none; background: none; cursor: pointer;">
                     <span class="mdl-list__item-primary-content">
                         <i class="material-icons mdl-list__item-icon text-color--secondary">exit_to_app</i>
                         Log out
                     </span>
-                </li>
-            </a>
+                </button>
+            </form>
         </ul>
 
         {{-- <button id="more" class="mdl-button mdl-js-button mdl-button--icon">

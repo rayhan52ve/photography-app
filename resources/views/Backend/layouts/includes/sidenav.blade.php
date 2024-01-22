@@ -8,6 +8,10 @@
                         <i class="material-icons" role="presentation">dashboard</i>
                         Dashboard
                     </a>
+                    <a class="mdl-navigation__link" href="{{route('admin.bio.index')}}">
+                        <i class="material-icons" role="presentation">person</i>
+                        Bio
+                    </a>
                     <div class="sub-navigation">
                         <a class="mdl-navigation__link">
                             <i class="material-icons">view_comfy</i>
@@ -41,10 +45,6 @@
                     <a class="mdl-navigation__link" href="ui-components.html">
                         <i class="material-icons">developer_board</i>
                         Components
-                    </a>
-                    <a class="mdl-navigation__link" href="forms.html">
-                        <i class="material-icons" role="presentation">person</i>
-                        Account
                     </a>
                     <a class="mdl-navigation__link" href="maps.html">
                         <i class="material-icons" role="presentation">map</i>
