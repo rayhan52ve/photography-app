@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Backend;
 use App\Http\Controllers\Controller;
 use App\Models\Bio;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
+use Intervention\Image\Facades\Image;
 
 class BioController extends Controller
 {
@@ -30,15 +32,51 @@ class BioController extends Controller
      */
     public function store(Request $request)
     {
+
         $existingBio = Bio::first();
 
         if ($existingBio) {
-            // Update existing record
-            $existingBio->update($request->all());
+            $existingBio->update($request->except('image'));
+            if ($request->hasFile('image')) {
+                $destination = 'uploads/bio/' . $existingBio->image;
+
+                if (File::exists($destination)) {
+                    File::delete($destination);
+                }
+
+                $file = $request->file('image');
+                $extension = $file->getClientOriginalExtension();
+                $filename = time() . '.' . $extension; // Change the file extension to webp
+                $path = 'uploads/bio/';
+
+                $file->move(public_path($path), $filename);
+
+                $existingBio->update(['image' => $filename]);
+            }
         } else {
-            // Create a new record
-            Bio::create($request->all());
+            $bio = new Bio;
+            if ($request->hasFile('image')) {
+                $file = $request->file('image');
+                $extension = $file->getClientOriginalExtension();
+                $filename = time() . '.' . $extension;
+                $path = 'uploads/bio/';
+                $file->move(public_path($path), $filename);
+
+                $bio->image = $filename;
+            }
+
+            $bio->name = $request->name;
+            $bio->age = $request->age;
+            $bio->designation = $request->designation;
+            $bio->phone = $request->phone;
+            $bio->email = $request->email;
+            $bio->city = $request->city;
+            $bio->description = $request->description;
+            $bio->city = $request->city;
+            $bio->story = $request->story;
+            $bio->save();
         }
+
         return redirect()->back();
     }
 
