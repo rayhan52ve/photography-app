@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
 use App\Models\Album;
+use App\Models\Category;
+use Illuminate\Support\Facades\File;
 use Illuminate\Http\Request;
 
 class AlbumController extends Controller
@@ -13,7 +15,8 @@ class AlbumController extends Controller
      */
     public function index()
     {
-        //
+        $albums = Album::all();
+        return view('Backend.modules.album.index', compact('albums'));
     }
 
     /**
@@ -21,7 +24,8 @@ class AlbumController extends Controller
      */
     public function create()
     {
-        //
+        $categories = Category::all();
+        return view('Backend.modules.album.create',compact('categories'));
     }
 
     /**
@@ -29,7 +33,27 @@ class AlbumController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validatedData = $request->validate([
+            'photo' => 'required',
+            'name' => 'required',
+            'category_id' => 'required',
+        ]);
+
+
+        if ($request->hasFile('photo')) {
+            $file = $request->file('photo');
+            $extension = $file->getClientOriginalExtension();
+            $filename = time() . '.' . $extension;
+            $path = 'uploads/album/';
+            $file->move(public_path($path), $filename);
+            $validatedData['photo'] = $filename;
+        }
+
+        Album::create($validatedData);
+
+        session()->flash('msg', 'Banner Image Added Successfully');
+        session()->flash('cls', 'success');
+        return redirect()->route('admin.album.index');
     }
 
     /**
@@ -45,7 +69,10 @@ class AlbumController extends Controller
      */
     public function edit(Album $album)
     {
-        //
+        $categories = Category::all();
+        $album->load('category');
+        return view('Backend.modules.album.edit',compact('album','categories'));
+
     }
 
     /**
@@ -53,7 +80,31 @@ class AlbumController extends Controller
      */
     public function update(Request $request, Album $album)
     {
-        //
+        $validatedData = $request->validate([
+            'photo' => 'image|mimes:jpeg,png,jpg,gif',
+            'name' => 'required|max:20',
+            'category_id' => 'required',
+
+        ]);
+
+        if ($request->hasFile('photo')) {
+            $destination = 'uploads/album/' . $album->photo;
+
+            if (File::exists($destination)) {
+                File::delete($destination);
+            }
+            $file = $request->file('photo');
+            $extension = $file->getClientOriginalExtension();
+            $filename = time() . '.' . $extension;
+            $path = 'uploads/album/';
+            $file->move(public_path($path), $filename);
+            $validatedData['photo'] = $filename;
+        }
+
+        $album->update($validatedData);
+        session()->flash('msg', 'Banner Updated Successfully');
+        session()->flash('cls', 'success');
+        return redirect()->route('admin.album.index');
     }
 
     /**
@@ -61,6 +112,16 @@ class AlbumController extends Controller
      */
     public function destroy(Album $album)
     {
-        //
+        $destination = 'uploads/album/' . $album->photo;
+
+        if (File::exists($destination)) {
+            File::delete($destination);
+        }
+
+        $album->delete();
+
+        session()->flash('msg', 'Slider Image Deleted Successfully');
+        session()->flash('cls', 'success');
+        return redirect()->back();
     }
 }

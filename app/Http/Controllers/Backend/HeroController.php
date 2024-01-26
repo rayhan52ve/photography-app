@@ -6,7 +6,6 @@ use App\Http\Controllers\Controller;
 use App\Models\Hero;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
-use Intervention\Image\Facades\Image;
 
 class HeroController extends Controller
 {

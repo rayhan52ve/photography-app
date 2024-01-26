@@ -53,11 +53,11 @@
                                             <th class="mdl-data-table__cell--non-numeric">Action</th>
                                         </tr>
                                     </thead>
-                                    @forelse ($categories as $category)
+                                    @forelse ($categories as $key => $category)
                                         <tbody>
                                             <tr>
-                                                <td class="mdl-data-table__cell--non-numeric">1</td>
-                                                <td class="mdl-data-table__cell--non-numeric">To Kill a Mockingbird</td>
+                                                <td class="mdl-data-table__cell--non-numeric">{{$key+1}}</td>
+                                                <td class="mdl-data-table__cell--non-numeric">{{$category->name}}</td>
                                                 <td class="mdl-data-table__cell--non-numeric">
                                                     <a href="{{ route('admin.category.edit', $category->id) }}"
                                                         class="btn btn-sm btn-warning" title="Edit">
