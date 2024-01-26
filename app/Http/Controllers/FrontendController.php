@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Hero;
 use Illuminate\Http\Request;
 
 class FrontendController extends Controller
@@ -9,7 +10,8 @@ class FrontendController extends Controller
     
     public function home()
     {
-        return view('Frontend.modules.index');
+        $heroes = Hero::all();
+        return view('Frontend.modules.index',compact('heroes'));
     }
 
     public function about()

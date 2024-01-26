@@ -3,6 +3,7 @@
 use App\Http\Controllers\Backend\BioController;
 use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\Backend\DashboardController;
+use App\Http\Controllers\Backend\HeroController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -35,6 +36,7 @@ Route::get('/dashboard',[DashboardController ::class,'dashboard'])->middleware([
 
 Route::name('admin.')->prefix('admin')->group(function(){
     Route::resource('bio',BioController::class)->only('index','store');
+    Route::resource('hero',HeroController::class);
 });
 
 Route::middleware('auth')->group(function () {

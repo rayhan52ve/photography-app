@@ -76,39 +76,9 @@ class BioController extends Controller
             $bio->story = $request->story;
             $bio->save();
         }
-
+        session()->flash('msg', 'Bio Updated Successfully');
+        session()->flash('cls', 'success');
         return redirect()->back();
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(Bio $bio)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(Bio $bio)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, Bio $bio)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(Bio $bio)
-    {
-        //
-    }
 }

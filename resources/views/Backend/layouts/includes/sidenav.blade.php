@@ -14,47 +14,20 @@
                     </a>
                     <div class="sub-navigation">
                         <a class="mdl-navigation__link">
-                            <i class="material-icons">view_comfy</i>
-                            UI
+                            <i class="material-icons">photo_size_select_actual</i>
+                            Hero Banner
                             <i class="material-icons">keyboard_arrow_down</i>
                         </a>
                         <div class="mdl-navigation">
-                            <a class="mdl-navigation__link" href="ui-buttons.html">
-                                Buttons
+                            <a class="mdl-navigation__link" href="{{route('admin.hero.index')}}">
+                                List
                             </a>
-                            <a class="mdl-navigation__link" href="ui-cards.html">
-                                Cards
-                            </a>
-                            <a class="mdl-navigation__link" href="ui-colors.html">
-                                Colors
-                            </a>
-                            <a class="mdl-navigation__link" href="ui-form-components.html">
-                                Forms
-                            </a>
-                            <a class="mdl-navigation__link" href="ui-icons.html">
-                                Icons
-                            </a>
-                            <a class="mdl-navigation__link" href="ui-typography.html">
-                                Typography
-                            </a>
-                            <a class="mdl-navigation__link" href="ui-tables.html">
-                                Tables
+                            <a class="mdl-navigation__link" href="{{route('admin.hero.create')}}">
+                                Create
                             </a>
                         </div>
                     </div>
-                    <a class="mdl-navigation__link" href="ui-components.html">
-                        <i class="material-icons">developer_board</i>
-                        Components
-                    </a>
-                    <a class="mdl-navigation__link" href="maps.html">
-                        <i class="material-icons" role="presentation">map</i>
-                        Maps
-                    </a>
-                    <a class="mdl-navigation__link" href="charts.html">
-                        <i class="material-icons">multiline_chart</i>
-                        Charts
-                    </a>
-                    <div class="sub-navigation">
+                    {{-- <div class="sub-navigation">
                         <a class="mdl-navigation__link">
                             <i class="material-icons">pages</i>
                             Pages
@@ -74,7 +47,7 @@
                                 404
                             </a>
                         </div>
-                    </div>
+                    </div> --}}
                     <div class="mdl-layout-spacer"></div>
                     <hr>
                     <a class="mdl-navigation__link" href="https://github.com/CreativeIT/getmdl-dashboard">

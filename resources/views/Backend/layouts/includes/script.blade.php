@@ -21,6 +21,12 @@
 {{-- text editor --}}
 <script src="https://cdn.tiny.cloud/1/YOUR_API_KEY/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
 
+{{-- bocicons --}}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.0/dist/boxicons.js"></script>
+{{-- sweet alert --}}
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+{{-- jquery --}}
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <!-- endinject -->
 
 @stack('js');
