@@ -41,7 +41,7 @@ Route::name('admin.')->prefix('admin')->group(function(){
     Route::resource('bio',BioController::class)->only('index','store');
     Route::resource('hero',HeroController::class)->except('show');
     Route::resource('category',CategoryController::class)->except('show');
-    Route::resource('album',AlbumController::class)->except('show');
+    Route::resource('album',AlbumController::class);
     Route::resource('photography',PhotographyController::class);
 });
 

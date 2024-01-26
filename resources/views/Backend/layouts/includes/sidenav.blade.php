@@ -1,47 +1,49 @@
 <div class="mdl-layout__drawer">
-    <header><a href="{{route('front.home')}}">darkboard</a></header>
+    <header><a href="{{ route('front.home') }}">darkboard</a></header>
     <div class="scroll__wrapper" id="scroll__wrapper">
         <div class="scroller" id="scroller">
             <div class="scroll__container" id="scroll__container">
                 <nav class="mdl-navigation">
-                    <a class="mdl-navigation__link mdl-navigation__link--current" href="{{route('dashboard')}}">
+                    <a class="mdl-navigation__link mdl-navigation__link--current" href="{{ route('dashboard') }}">
                         <i class="material-icons" role="presentation">dashboard</i>
                         Dashboard
                     </a>
-                    <a class="mdl-navigation__link" href="{{route('admin.bio.index')}}">
+                    <a class="mdl-navigation__link" href="{{ route('admin.bio.index') }}">
                         <i class="material-icons" role="presentation">person</i>
                         Bio
                     </a>
                     <div class="sub-navigation">
                         <a class="mdl-navigation__link">
-                            <i class="material-icons">photo_size_select_actual</i>
-                            Hero Banner
+                            <i class="material-icons">photo_camera</i>
+                            Photography
                             <i class="material-icons">keyboard_arrow_down</i>
                         </a>
                         <div class="mdl-navigation">
-                            <a class="mdl-navigation__link" href="{{route('admin.hero.index')}}">
-                                Banner List
+                            <a class="mdl-navigation__link" href="{{ route('admin.category.index') }}">
+                                Album Category
                             </a>
-                            <a class="mdl-navigation__link" href="{{route('admin.hero.create')}}">
-                                Banner Create
+                            <a class="mdl-navigation__link" href="{{ route('admin.album.index') }}">
+                                Manage Albums
+                            </a>
+                            <a class="mdl-navigation__link" href="{{ route('admin.photography.index') }}">
+                                Manage Photos
                             </a>
                         </div>
                     </div>
                     <div class="sub-navigation">
                         <a class="mdl-navigation__link">
-                            <i class="material-icons">photo_size_select_actual</i>
-                            Photography
+                            <i class="material-icons">settings</i>
+                            Settings
                             <i class="material-icons">keyboard_arrow_down</i>
                         </a>
                         <div class="mdl-navigation">
-                            <a class="mdl-navigation__link" href="{{route('admin.category.index')}}">
-                                Album Category
+                            <a class="mdl-navigation__link" href="{{ route('admin.hero.index') }}">
+                                Banners
                             </a>
-                            <a class="mdl-navigation__link" href="{{route('admin.album.index')}}">
-                                Manage Albums
-                            </a>
-                            <a class="mdl-navigation__link" href="{{route('admin.photography.index')}}">
-                                Manage Photos
+                        </div>
+                        <div class="mdl-navigation">
+                            <a class="mdl-navigation__link" href="{{ url('/profile') }}">
+                                My Account
                             </a>
                         </div>
                     </div>

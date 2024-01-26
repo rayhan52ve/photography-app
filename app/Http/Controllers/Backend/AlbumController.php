@@ -61,7 +61,9 @@ class AlbumController extends Controller
      */
     public function show(Album $album)
     {
-        //
+        // $album->load('category');
+        // dd($album);
+        return view('Backend.modules.album.show',compact('album'));
     }
 
     /**

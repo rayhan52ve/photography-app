@@ -160,7 +160,7 @@
                     </span>
                 </li>
             </a>
-            <li class="mdl-menu__item mdl-list__item">
+            {{-- <li class="mdl-menu__item mdl-list__item">
                 <span class="mdl-list__item-primary-content">
                     <i class="material-icons mdl-list__item-icon">check_box</i>
                     My tasks
@@ -181,7 +181,7 @@
                     <i class="material-icons mdl-list__item-icon">settings</i>
                     Settings
                 </span>
-            </li>
+            </li> --}}
             <form method="POST" action="{{ route('logout') }}">
                 @csrf
                 <button type="submit" class="mdl-menu__item mdl-list__item"
