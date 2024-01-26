@@ -6,7 +6,6 @@ use App\Http\Controllers\Controller;
 use App\Models\Bio;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
-use Intervention\Image\Facades\Image;
 
 class BioController extends Controller
 {

@@ -69,7 +69,7 @@
                 let id = $(this).attr('data-id')
 
                 Swal.fire({
-                    title: 'Are you sure to delete this tag?',
+                    title: 'Are you sure to delete this?',
                     text: "You won't be able to revert this!",
                     icon: 'warning',
                     showCancelButton: true,

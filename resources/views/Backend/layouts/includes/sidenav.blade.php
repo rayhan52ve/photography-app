@@ -20,10 +20,28 @@
                         </a>
                         <div class="mdl-navigation">
                             <a class="mdl-navigation__link" href="{{route('admin.hero.index')}}">
-                                List
+                                Banner List
                             </a>
                             <a class="mdl-navigation__link" href="{{route('admin.hero.create')}}">
-                                Create
+                                Banner Create
+                            </a>
+                        </div>
+                    </div>
+                    <div class="sub-navigation">
+                        <a class="mdl-navigation__link">
+                            <i class="material-icons">photo_size_select_actual</i>
+                            Photography
+                            <i class="material-icons">keyboard_arrow_down</i>
+                        </a>
+                        <div class="mdl-navigation">
+                            <a class="mdl-navigation__link" href="{{route('admin.category.index')}}">
+                                Album Category
+                            </a>
+                            <a class="mdl-navigation__link" href="{{route('admin.album.index')}}">
+                                Manage Albums
+                            </a>
+                            <a class="mdl-navigation__link" href="{{route('admin.photography.index')}}">
+                                Manage Photos
                             </a>
                         </div>
                     </div>

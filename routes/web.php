@@ -1,9 +1,12 @@
 <?php
 
+use App\Http\Controllers\Backend\AlbumController;
 use App\Http\Controllers\Backend\BioController;
+use App\Http\Controllers\Backend\CategoryController;
 use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\Backend\DashboardController;
 use App\Http\Controllers\Backend\HeroController;
+use App\Http\Controllers\Backend\PhotographyController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -36,7 +39,10 @@ Route::get('/dashboard',[DashboardController ::class,'dashboard'])->middleware([
 
 Route::name('admin.')->prefix('admin')->group(function(){
     Route::resource('bio',BioController::class)->only('index','store');
-    Route::resource('hero',HeroController::class);
+    Route::resource('hero',HeroController::class)->except('show');
+    Route::resource('category',CategoryController::class)->except('show');
+    Route::resource('album',AlbumController::class)->except('show');
+    Route::resource('photography',PhotographyController::class);
 });
 
 Route::middleware('auth')->group(function () {
