@@ -15,7 +15,7 @@ class AlbumController extends Controller
      */
     public function index()
     {
-        $albums = Album::all();
+        $albums = Album::latest()->get();
         return view('Backend.modules.album.index', compact('albums'));
     }
 
@@ -51,7 +51,7 @@ class AlbumController extends Controller
 
         Album::create($validatedData);
 
-        session()->flash('msg', 'Banner Image Added Successfully');
+        session()->flash('msg', 'Album Created Successfully');
         session()->flash('cls', 'success');
         return redirect()->route('admin.album.index');
     }
@@ -61,8 +61,6 @@ class AlbumController extends Controller
      */
     public function show(Album $album)
     {
-        // $album->load('category');
-        // dd($album);
         return view('Backend.modules.album.show',compact('album'));
     }
 
@@ -104,7 +102,7 @@ class AlbumController extends Controller
         }
 
         $album->update($validatedData);
-        session()->flash('msg', 'Banner Updated Successfully');
+        session()->flash('msg', 'Album Updated Successfully');
         session()->flash('cls', 'success');
         return redirect()->route('admin.album.index');
     }
@@ -122,7 +120,7 @@ class AlbumController extends Controller
 
         $album->delete();
 
-        session()->flash('msg', 'Slider Image Deleted Successfully');
+        session()->flash('msg', 'Album Deleted Successfully');
         session()->flash('cls', 'success');
         return redirect()->back();
     }

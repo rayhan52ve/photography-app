@@ -12,24 +12,18 @@
                         <i class="material-icons" role="presentation">person</i>
                         Bio
                     </a>
-                    <div class="sub-navigation">
-                        <a class="mdl-navigation__link">
-                            <i class="material-icons">photo_camera</i>
-                            Photography
-                            <i class="material-icons">keyboard_arrow_down</i>
-                        </a>
-                        <div class="mdl-navigation">
-                            <a class="mdl-navigation__link" href="{{ route('admin.category.index') }}">
-                                Album Category
-                            </a>
-                            <a class="mdl-navigation__link" href="{{ route('admin.album.index') }}">
-                                Manage Albums
-                            </a>
-                            <a class="mdl-navigation__link" href="{{ route('admin.photography.index') }}">
-                                Manage Photos
-                            </a>
-                        </div>
-                    </div>
+                    <a class="mdl-navigation__link" href="{{ route('admin.category.index') }}">
+                        <i class="material-icons" role="presentation">photo_camera</i>
+                        Album Category
+                    </a>
+                    <a class="mdl-navigation__link" href="{{ route('admin.album.index') }}">
+                        <i class="material-icons" role="presentation">photo_camera</i>
+                        Albums
+                    </a>
+                    <a class="mdl-navigation__link" href="{{ route('admin.photography.index') }}">
+                        <i class="material-icons" role="presentation">photo_camera</i>
+                        Photos
+                    </a>
                     <div class="sub-navigation">
                         <a class="mdl-navigation__link">
                             <i class="material-icons">settings</i>

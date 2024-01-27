@@ -6,29 +6,38 @@
 
             <div class="mdl-cell mdl-cell--12-col-desktop mdl-cell--12-col-tablet mdl-cell--4-col-phone">
                 <div class="d-flex justify-content-between align-items-center p-3">
-                    <h3 style="display: inline-block; margin-right: 10px;">Album: {{$album->name}}</h3>
-                    <a class="btn btn-outline-info" href="{{ route('admin.photography.create') }}">Create Album</a>
+                    <h3 style="display: inline-block; margin-right: 10px;">All Photos</h3>
+                    <a class="btn btn-outline-info" href="{{ route('admin.photography.create') }}">Upload New Photos</a>
                 </div>
             </div>
 
             <div class="container">
                 <div class="m-4">
                     <div class="row">
-                        @forelse ($album->photographies as $key => $photography)
+                        @forelse ($photographies as $key => $photography)
                             <div class="col-md-3 mb-4 position-relative">
                                 <div class="card bg-dark text-white">
-                                    <img src="{{ asset('uploads/photography/' . $photography->photo) }}" style="height: 200px"
-                                        class="card-img" alt="">
+                                    <img src="{{ asset('uploads/photography/' . $photography->photo) }}"
+                                        style="height: 200px" class="card-img" alt="">
                                     <div class="card-img-overlay d-flex flex-column justify-content-between">
                                         <div class="position-absolute top-0 end-0 badge bg-success">{{ $key + 1 }}
                                         </div>
+                                        <div class="inline" style="display: inline-block;">
+                                            Album: <a href="{{ route('admin.album.show', $photography->album->id) }}"
+                                                style="display: inline-block; margin: 0;">
+                                                <h6 class="card-title" style="display: inline; margin: 0;">
+                                                    {{ $photography->album->name }}</h6>
+                                            </a>
+                                        </div>
+
                                         <div>
-                                            <a href="{{ route('admin.album.edit', $album->id) }}" class="btn btn-warning"
-                                                title="Edit">
+                                            <a href="{{ route('admin.photography.edit', $photography->id) }}"
+                                                class="btn btn-warning" title="Edit">
                                                 <box-icon name='edit'></box-icon>
                                             </a>
                                             <form id="{{ 'form_' . $photography->id }}"
-                                                action="{{ route('admin.photography.destroy', $photography) }}" method="post">
+                                                action="{{ route('admin.photography.destroy', $photography) }}"
+                                                method="post">
                                                 @csrf
                                                 @method('DELETE')
                                                 <button data-id="{{ $photography->id }}" title="Delete"
@@ -42,7 +51,7 @@
                             </div>
                         @empty
                             <div class="mdl-cell mdl-cell--12-col-desktop mdl-cell--12-col-tablet mdl-cell--4-col-phone">
-                                <h3 class="text-center text-danger">This album has no photo Yet</h3>
+                                <h3 class="text-center text-danger">No Photo Uploaded Yet</h3>
                             </div>
                         @endforelse
                     </div>
