@@ -40,6 +40,11 @@
                                 My Account
                             </a>
                         </div>
+                        <div class="mdl-navigation">
+                            <a class="mdl-navigation__link" href="{{ route('admin.web-info.index') }}">
+                                Website info
+                            </a>
+                        </div>
                     </div>
                     {{-- <div class="sub-navigation">
                         <a class="mdl-navigation__link">

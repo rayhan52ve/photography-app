@@ -7,6 +7,7 @@ use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\Backend\DashboardController;
 use App\Http\Controllers\Backend\HeroController;
 use App\Http\Controllers\Backend\PhotographyController;
+use App\Http\Controllers\Backend\WebsiteInfoController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -43,6 +44,7 @@ Route::name('admin.')->prefix('admin')->group(function(){
     Route::resource('category',CategoryController::class)->except('show');
     Route::resource('album',AlbumController::class);
     Route::resource('photography',PhotographyController::class);
+    Route::resource('web-info',WebsiteInfoController::class)->only('index','store');
 });
 
 Route::middleware('auth')->group(function () {
