@@ -21,9 +21,9 @@
                                                         style="border: 2px solid #ccc; padding: 5px; display: inline-block;">
                                                         <input type="file" id="imageInput1" name="logo"
                                                             class="form-control">
-                                                            <img id="profileImage1"
-                                                                src="/uploads/websiteinfo/logo/{{ @$websiteInfo->logo }}"
-                                                                height="150px" width="150px">
+                                                        <img id="profileImage1"
+                                                            src="/uploads/websiteinfo/logo/{{ @$websiteInfo->logo }}"
+                                                            height="150px" width="150px">
 
                                                         <i class="mdi mdi-camera mdi-24px"></i> Website Logo
                                                     </label>
@@ -35,9 +35,9 @@
                                                         style="border: 2px solid #ccc; padding: 5px; display: inline-block;">
                                                         <input type="file" id="imageInput2" name="fevicon"
                                                             class="form-control">
-                                                            <img id="profileImage2"
-                                                                src="/uploads/websiteinfo/fevicon/{{ @$websiteInfo->fevicon }}"
-                                                                height="150px" width="150px">
+                                                        <img id="profileImage2"
+                                                            src="/uploads/websiteinfo/fevicon/{{ @$websiteInfo->fevicon }}"
+                                                            height="150px" width="150px">
                                                         <i class="mdi mdi-camera mdi-24px"></i> Fevicon
                                                     </label>
                                                 </div>
@@ -46,15 +46,15 @@
                                         <div class="row mb-3">
                                             <div class="col-md-4">
                                                 <div class="row">
-                                                        <div class="form-outline">
-                                                            <label class="form-label" for="address">Website Name</label>
-                                                            <input type="text" name="title"
-                                                                class="form-control @error('title') is-invalid @enderror"
-                                                                value="{{ @$websiteInfo->title }}" />
-                                                        </div>
-                                                        @error('title')
-                                                            <div class="alert alert-danger">{{ $message }}</div>
-                                                        @enderror
+                                                    <div class="form-outline">
+                                                        <label class="form-label" for="address">Website Name</label>
+                                                        <input type="text" name="title"
+                                                            class="form-control @error('title') is-invalid @enderror"
+                                                            value="{{ @$websiteInfo->title }}" />
+                                                    </div>
+                                                    @error('title')
+                                                        <div class="alert alert-danger">{{ $message }}</div>
+                                                    @enderror
                                                 </div>
                                             </div>
                                         </div>
@@ -62,60 +62,60 @@
                                         <div class="row mb-3">
                                             <div class="col-md-4">
                                                 <div class="row">
-                                                        <div class="form-outline">
-                                                            <label class="form-label" for="facebook">Facebook</label>
-                                                            <input type="text" name="facebook"
-                                                                class="form-control @error('facebook') is-invalid @enderror"
-                                                                value="{{ @$websiteInfo->facebook }}" />
-                                                        </div>
-                                                        @error('facebook')
-                                                            <div class="alert alert-danger">{{ $message }}</div>
-                                                        @enderror
+                                                    <div class="form-outline">
+                                                        <label class="form-label" for="facebook">Facebook</label>
+                                                        <input type="text" name="facebook"
+                                                            class="form-control @error('facebook') is-invalid @enderror"
+                                                            value="{{ @$websiteInfo->facebook }}" />
+                                                    </div>
+                                                    @error('facebook')
+                                                        <div class="alert alert-danger">{{ $message }}</div>
+                                                    @enderror
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="row mb-3">
                                             <div class="col-md-4">
                                                 <div class="row">
-                                                        <div class="form-outline">
-                                                            <label class="form-label" for="tweeter">Tweeter</label>
-                                                            <input type="text" name="tweeter"
-                                                                class="form-control @error('tweeter') is-invalid @enderror"
-                                                                value="{{ @$websiteInfo->tweeter }}" />
-                                                        </div>
-                                                        @error('tweeter')
-                                                            <div class="alert alert-danger">{{ $message }}</div>
-                                                        @enderror
+                                                    <div class="form-outline">
+                                                        <label class="form-label" for="tweeter">Tweeter</label>
+                                                        <input type="text" name="tweeter"
+                                                            class="form-control @error('tweeter') is-invalid @enderror"
+                                                            value="{{ @$websiteInfo->tweeter }}" />
+                                                    </div>
+                                                    @error('tweeter')
+                                                        <div class="alert alert-danger">{{ $message }}</div>
+                                                    @enderror
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="row mb-3">
                                             <div class="col-md-4">
                                                 <div class="row">
-                                                        <div class="form-outline">
-                                                            <label class="form-label" for="instagram">Instagram</label>
-                                                            <input type="text" name="instagram"
-                                                                class="form-control @error('instagram') is-invalid @enderror"
-                                                                value="{{ @$websiteInfo->instagram }}" />
-                                                        </div>
-                                                        @error('instagram')
-                                                            <div class="alert alert-danger">{{ $message }}</div>
-                                                        @enderror
+                                                    <div class="form-outline">
+                                                        <label class="form-label" for="instagram">Instagram</label>
+                                                        <input type="text" name="instagram"
+                                                            class="form-control @error('instagram') is-invalid @enderror"
+                                                            value="{{ @$websiteInfo->instagram }}" />
+                                                    </div>
+                                                    @error('instagram')
+                                                        <div class="alert alert-danger">{{ $message }}</div>
+                                                    @enderror
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="row mb-3">
                                             <div class="col-md-4">
                                                 <div class="row">
-                                                        <div class="form-outline">
-                                                            <label class="form-label" for="linkedin">Linkedin</label>
-                                                            <input type="text" name="linkedin"
-                                                                class="form-control @error('linkedin') is-invalid @enderror"
-                                                                value="{{ @$websiteInfo->linkedin }}" />
-                                                        </div>
-                                                        @error('title')
-                                                            <div class="alert alert-danger">{{ $message }}</div>
-                                                        @enderror
+                                                    <div class="form-outline">
+                                                        <label class="form-label" for="linkedin">Linkedin</label>
+                                                        <input type="text" name="linkedin"
+                                                            class="form-control @error('linkedin') is-invalid @enderror"
+                                                            value="{{ @$websiteInfo->linkedin }}" />
+                                                    </div>
+                                                    @error('title')
+                                                        <div class="alert alert-danger">{{ $message }}</div>
+                                                    @enderror
                                                 </div>
                                             </div>
                                         </div>
@@ -123,15 +123,15 @@
                                         <div class="row mb-3">
                                             <div class="col-md-4">
                                                 <div class="row">
-                                                        <div class="form-outline">
-                                                            <label class="form-label" for="copyright">Copy Right</label>
-                                                            <input type="text" name="copyright"
-                                                                class="form-control @error('copyright') is-invalid @enderror"
-                                                                value="{{ @$websiteInfo->copyright }}" />
-                                                        </div>
-                                                        @error('copyright')
-                                                            <div class="alert alert-danger">{{ $message }}</div>
-                                                        @enderror
+                                                    <div class="form-outline">
+                                                        <label class="form-label" for="copyright">Copy Right</label>
+                                                        <input type="text" name="copyright"
+                                                            class="form-control @error('copyright') is-invalid @enderror"
+                                                            value="{{ @$websiteInfo->copyright }}" />
+                                                    </div>
+                                                    @error('copyright')
+                                                        <div class="alert alert-danger">{{ $message }}</div>
+                                                    @enderror
                                                 </div>
                                             </div>
                                         </div>

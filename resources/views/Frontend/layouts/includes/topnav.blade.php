@@ -4,9 +4,10 @@
 
             <a href="index.html" class="logo d-flex align-items-center  me-auto me-lg-0">
                 <!-- Uncomment the line below if you also wish to use an image logo -->
-                <!-- <img src="{{ asset('frontend/assets/img/logo.png') }}" alt=""> -->
-                <i class="bi bi-camera"></i>
-                <h1>PhotoFolio</h1>
+                <img src="/uploads/websiteinfo/logo/{{ @$websiteInfo->logo }}" alt="">
+                <h1>{{ @$websiteInfo->title }}</h1>
+                <i class="bi bi-camera mx-2"></i>
+
             </a>
 
             <nav id="navbar" class="navbar">
@@ -24,10 +25,10 @@
             </nav><!-- .navbar -->
 
             <div class="header-social-links">
-                <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-                <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-                <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-                <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
+                <a href="{{ @$websiteInfo->tweeter }}" class="twitter"><i class="bi bi-twitter"></i></a>
+                <a href="{{ @$websiteInfo->facebook }}" class="facebook"><i class="bi bi-facebook"></i></a>
+                <a href="{{ @$websiteInfo->instagram }}" class="instagram"><i class="bi bi-instagram"></i></a>
+                <a href="{{ @$websiteInfo->linkedin }}" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
             </div>
             <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
             <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>

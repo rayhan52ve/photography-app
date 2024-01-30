@@ -16,6 +16,9 @@
 </head>
 
 <body>
+    @php
+        $websiteInfo = \App\Models\WebsiteInfo::first();
+    @endphp
 
     @include('Frontend.layouts.includes.topnav')
 

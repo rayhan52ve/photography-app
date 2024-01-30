@@ -1,11 +1,11 @@
     <!-- ======= Footer ======= -->
     <footer id="footer" class="footer">
-        {{-- <div class="container">
+        <div class="container">
             <div class="copyright">
-                &copy; Copyright <strong><span>PhotoFolio</span></strong>. All Rights Reserved
+                &copy; {{ @$websiteInfo->copyright }}
             </div>
-            <div class="credits">
+            {{-- <div class="credits">
                 Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-            </div>
-        </div> --}}
+            </div> --}}
+        </div>
     </footer><!-- End Footer -->
