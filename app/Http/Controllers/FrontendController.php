@@ -2,7 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Album;
+use App\Models\Bio;
+use App\Models\Category;
 use App\Models\Hero;
+use App\Models\WebsiteInfo;
 use Illuminate\Http\Request;
 
 class FrontendController extends Controller
@@ -16,17 +20,22 @@ class FrontendController extends Controller
 
     public function about()
     {
-        return view('Frontend.modules.about');
+        $bio = Bio::first();
+        return view('Frontend.modules.about',compact('bio'));
     }
 
     public function gallery()
     {
-        return view('Frontend.modules.gallery');
+        $albumCount = Album::count();
+        $categories = Category::with('albums')->get();
+        return view('Frontend.modules.gallery',compact('categories','albumCount'));
     }
 
-    public function gallerySingle()
+    public function gallerySingle($id)
     {
-        return view('Frontend.modules.gallery_single');
+        $websiteInfo = WebsiteInfo::first();
+        $album = Album::find($id);
+        return view('Frontend.modules.gallery_single',compact('album','websiteInfo'));
     }
 
     public function services()
@@ -36,6 +45,7 @@ class FrontendController extends Controller
 
     public function contact()
     {
-        return view('Frontend.modules.contact');
+        $bio = Bio::first();
+        return view('Frontend.modules.contact',compact('bio'));
     }
 }

@@ -22,8 +22,8 @@
                                         <input type="file" id="imageInput" value="{{ old('image') }}" name="image"
                                             class="form-control">
                                         @if (@$bio->image)
-                                            <img id="profileImage" src="{{ asset('uploads/bio/' . $bio->image) }}" height="100%"
-                                                width="300px" class="rounded-top">
+                                            <img id="profileImage" src="{{ asset('uploads/bio/' . $bio->image) }}"
+                                                height="100%" width="300px" class="rounded-top">
                                         @else
                                             <img id="profileImage" src="{{ asset('asset/bio.jpg') }}" height="100%"
                                                 width="300px" class="rounded-top">
@@ -82,7 +82,7 @@
                                                 class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label full-size">
                                                 <input name="city" class="mdl-textfield__input" type="text"
                                                     value="{{ @$bio->city }}" id="floating-first-name">
-                                                <label class="mdl-textfield__label" for="floating-first-name">City</label>
+                                                <label class="mdl-textfield__label" for="floating-first-name">Address</label>
                                             </div>
                                         </div>
                                         <div class="col-md-12">

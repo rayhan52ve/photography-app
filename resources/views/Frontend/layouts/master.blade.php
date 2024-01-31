@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+@php
+    $websiteInfo = \App\Models\WebsiteInfo::first();
+@endphp
 
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Photography</title>
+    <title>{{ @$websiteInfo->title }}</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
     <!-- Favicons -->
-    <link href="{{ asset('frontend/assets/img/photo-camera.svg') }}" rel="icon">
+    <link href="{{ asset('uploads/websiteinfo/fevicon/' . $websiteInfo->fevicon) }}" rel="icon">
 
     @include('Frontend.layouts.includes.css')
 </head>
 
 <body>
-    @php
-        $websiteInfo = \App\Models\WebsiteInfo::first();
-    @endphp
 
     @include('Frontend.layouts.includes.topnav')
 

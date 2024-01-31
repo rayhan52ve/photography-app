@@ -7,9 +7,7 @@
             <div class="row d-flex justify-content-center">
                 <div class="col-lg-6 text-center">
                     <h2>Contact</h2>
-                    <p>Odio et unde deleniti. Deserunt numquam exercitationem. Officiis quo odio sint voluptas consequatur
-                        ut a odio voluptatem. Sit dolorum debitis veritatis natus dolores. Quasi ratione sint. Sit quaerat
-                        ipsum dolorem.</p>
+                    <p>{{ @$bio->description }}</p>
 
                 </div>
             </div>
@@ -27,7 +25,7 @@
                         <i class="bi bi-geo-alt flex-shrink-0"></i>
                         <div>
                             <h4>Location:</h4>
-                            <p>A108 Adam Street, New York, NY 535022</p>
+                            <p>{{ @$bio->city }}</p>
                         </div>
                     </div>
                 </div><!-- End Info Item -->
@@ -37,7 +35,7 @@
                         <i class="bi bi-envelope flex-shrink-0"></i>
                         <div>
                             <h4>Email:</h4>
-                            <p>info@example.com</p>
+                            <p>{{ @$bio->email }}</p>
                         </div>
                     </div>
                 </div><!-- End Info Item -->
@@ -47,7 +45,7 @@
                         <i class="bi bi-phone flex-shrink-0"></i>
                         <div>
                             <h4>Call:</h4>
-                            <p>+1 5589 55488 55</p>
+                            <p>{{ @$bio->phone }}</p>
                         </div>
                     </div>
                 </div><!-- End Info Item -->
