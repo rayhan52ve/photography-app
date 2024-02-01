@@ -7,7 +7,7 @@
             <div class="mdl-cell mdl-cell--12-col-desktop mdl-cell--12-col-tablet mdl-cell--4-col-phone">
                 <div class="d-flex justify-content-between align-items-center p-3">
                     <h3 style="display: inline-block; margin-right: 10px;">Album: {{$album->name}}</h3>
-                    <a class="btn btn-outline-info" href="{{ route('admin.photography.create') }}">Create Album</a>
+                    <a class="btn btn-outline-info" href="{{ route('admin.photography.create') }}">Upload New Photos</a>
                 </div>
             </div>
 
@@ -23,7 +23,7 @@
                                         <div class="position-absolute top-0 end-0 badge bg-success">{{ $key + 1 }}
                                         </div>
                                         <div>
-                                            <a href="{{ route('admin.album.edit', $album->id) }}" class="btn btn-warning"
+                                            <a href="{{ route('admin.photography.edit', $photography->id) }}" class="btn btn-warning"
                                                 title="Edit">
                                                 <box-icon name='edit'></box-icon>
                                             </a>
@@ -42,7 +42,7 @@
                             </div>
                         @empty
                             <div class="mdl-cell mdl-cell--12-col-desktop mdl-cell--12-col-tablet mdl-cell--4-col-phone">
-                                <h3 class="text-center text-danger">This album has no photo Yet</h3>
+                                <h3 class="text-center text-danger">This photography has no photo Yet</h3>
                             </div>
                         @endforelse
                     </div>

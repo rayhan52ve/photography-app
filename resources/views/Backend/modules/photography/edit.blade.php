@@ -53,6 +53,7 @@
                                                 @endforeach
                                             </select>
                                         </div>
+                                        <input type="hidden" name="previous_route" value="{{$previousRoute}}">
 
                                         <button type="submit"
                                             class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button--colored-teal mt-5">

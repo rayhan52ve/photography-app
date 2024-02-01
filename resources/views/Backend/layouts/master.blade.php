@@ -2,6 +2,7 @@
 <html lang="en" xmlns="http://www.w3.org/1999/html">
 @php
     $websiteInfo = \App\Models\WebsiteInfo::first();
+    $bio = \App\Models\Bio::first();
 @endphp
 
 <head>

@@ -14,8 +14,8 @@
                                     method="POST" enctype="multipart/form-data">
                                     @csrf
                                     <div class="row">
-                                        <div class="row mb-3">
-                                            <div class="col-md-2">
+                                        <div class="row mb-5">
+                                            <div class="col-md-3">
                                                 <div class="mb-4">
                                                     <label class="image" for="imageInput1"
                                                         style="border: 2px solid #ccc; padding: 5px; display: inline-block;">
@@ -23,7 +23,7 @@
                                                             class="form-control">
                                                         <img id="profileImage1"
                                                             src="/uploads/websiteinfo/logo/{{ @$websiteInfo->logo }}"
-                                                            height="150px" width="150px">
+                                                            height="auto" width="100%">
 
                                                         <i class="mdi mdi-camera mdi-24px"></i> Website Logo
                                                     </label>
@@ -37,7 +37,7 @@
                                                             class="form-control">
                                                         <img id="profileImage2"
                                                             src="/uploads/websiteinfo/fevicon/{{ @$websiteInfo->fevicon }}"
-                                                            height="150px" width="150px">
+                                                            width="100%" style="max-height: 100px">
                                                         <i class="mdi mdi-camera mdi-24px"></i> Fevicon
                                                     </label>
                                                 </div>
@@ -269,6 +269,12 @@
                     toast: 'true',
                     title: '{{ session('msg') }}',
                     showConfirmButton: false,
+                    confirmButtonText: "ok",
+                    timerProgressBar: false,
+                    showCancelButton: false,
+                    allowOutsideClick: false,
+                    allowEscapeKey: false,
+                    showCloseButton: true,
                     timer: 3000
                 })
             @endif

@@ -24,8 +24,9 @@ class PhotographyController extends Controller
      */
     public function create()
     {
+        $previousRoute = url()->previous();
         $albums = Album::all();
-        return view('Backend.modules.photography.create', compact('albums'));
+        return view('Backend.modules.photography.create', compact('albums','previousRoute'));
     }
 
     /**
@@ -52,7 +53,7 @@ class PhotographyController extends Controller
 
         session()->flash('msg', 'Photo Uploaded Successfully');
         session()->flash('cls', 'success');
-        return redirect()->route('admin.photography.index');
+        return redirect($request->previous_route);
     }
 
     /**
@@ -68,9 +69,10 @@ class PhotographyController extends Controller
      */
     public function edit(Photography $photography)
     {
+        $previousRoute = url()->previous();
         $albums = Album::all();
         $photography->load('album');
-        return view('Backend.modules.photography.edit',compact('photography','albums'));
+        return view('Backend.modules.photography.edit',compact('photography','albums','previousRoute'));
     }
 
     /**
@@ -101,7 +103,7 @@ class PhotographyController extends Controller
         $photography->update($validatedData);
         session()->flash('msg', 'Photo Updated Successfully');
         session()->flash('cls', 'success');
-        return redirect()->route('admin.photography.index');
+        return redirect($request->previous_route);
     }
 
     /**

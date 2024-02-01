@@ -1,5 +1,5 @@
 <div class="mdl-layout__drawer">
-    <header><a href="{{ route('front.home') }}">darkboard</a></header>
+    <header><a href="{{ route('front.home') }}">frontend</a></header>
     <div class="scroll__wrapper" id="scroll__wrapper">
         <div class="scroller" id="scroller">
             <div class="scroll__container" id="scroll__container">
@@ -69,9 +69,9 @@
                     </div> --}}
                     <div class="mdl-layout-spacer"></div>
                     <hr>
-                    <a class="mdl-navigation__link" href="https://github.com/CreativeIT/getmdl-dashboard">
-                        <i class="material-icons" role="presentation">link</i>
-                        GitHub
+                    <a class="mdl-navigation__link" href="{{route('front.home')}}" target="blank_" title="Open new tab for frontend">
+                        <i class="material-icons" role="presentation">home</i>
+                        Go To Frontend
                     </a>
                 </nav>
             </div>

@@ -8,85 +8,60 @@
                 <!-- Column -->
                 <div class="row">
                     <div class="col-xl-3 col-md-4">
-                        <div class="card bg-primary text-white mb-4">
+                        <div class="card text-white mb-4" style="background-color: rgb(79, 164, 79)">
                             <div class="card-header">
-                                <h5>Super Admin</h5>
+                                <h5>Banners</h5>
                             </div>
                             <div class="card-body text-center">
-                                <h1>55</h1>
+                                <h1>{{$bannerCount}}</h1>
                             </div>
                             <div class="card-footer d-flex align-items-center justify-content-between">
-                                <a class="small text-white stretched-link" href="#">View Details</a>
+                                <a class="small text-white stretched-link" href="{{route('admin.hero.index')}}">View Details</a>
                                 <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                             </div>
                         </div>
                     </div>
+
                     <div class="col-xl-3 col-md-4">
-                        <div class="card bg-warning text-white mb-4">
+                        <div class="card bg-dark text-white mb-4">
                             <div class="card-header">
-                                <h5>Admin</h5>
+                                <h5>Album Category</h5>
                             </div>
                             <div class="card-body text-center">
-                                <h1>66</h1>
+                                <h1>{{$categoryCount}}</h1>
                             </div>
                             <div class="card-footer d-flex align-items-center justify-content-between">
-                                <a class="small text-white stretched-link" href="#">View Details</a>
+                                <a class="small text-white stretched-link" href="{{route('admin.category.index')}}">View Details</a>
                                 <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                             </div>
                         </div>
                     </div>
+
                     <div class="col-xl-3 col-md-4">
-                        <div class="card bg-success text-white mb-4">
+                        <div class="card bg-info text-white mb-4">
                             <div class="card-header">
-                                <h5>User</h5>
+                                <h5>Albums</h5>
                             </div>
                             <div class="card-body text-center">
-                                <h1>66</h1>
+                                <h1>{{$albumCount}}</h1>
                             </div>
                             <div class="card-footer d-flex align-items-center justify-content-between">
-                                <a class="small text-white stretched-link" href="#">View Details</a>
+                                <a class="small text-white stretched-link" href="{{route('admin.album.index')}}">View Details</a>
                                 <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                             </div>
                         </div>
                     </div>
+
                     <div class="col-xl-3 col-md-4">
                         <div class="card bg-danger text-white mb-4">
                             <div class="card-header">
-                                <h5>Blood Donor</h5>
+                                <h5>Photos</h5>
                             </div>
                             <div class="card-body text-center">
-                                <h1>77</h1>
+                                <h1>{{$photoCount}}</h1>
                             </div>
                             <div class="card-footer d-flex align-items-center justify-content-between">
-                                <a class="small text-white stretched-link" href="#">View Details</a>
-                                <div class="small text-white"><i class="fas fa-angle-right"></i></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-md-4">
-                        <div class="card text-white mb-4" style="background-color: rgb(53, 53, 98)">
-                            <div class="card-header">
-                                <h5>Workers</h5>
-                            </div>
-                            <div class="card-body text-center">
-                                <h1>99</h1>
-                            </div>
-                            <div class="card-footer d-flex align-items-center justify-content-between">
-                                <a class="small text-white stretched-link" href="#">View Details</a>
-                                <div class="small text-white"><i class="fas fa-angle-right"></i></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-md-4">
-                        <div class="card text-white mb-4" style="background-color: rgb(79, 164, 79)">
-                            <div class="card-header">
-                                <h5>Others</h5>
-                            </div>
-                            <div class="card-body text-center">
-                                <h1>00</h1>
-                            </div>
-                            <div class="card-footer d-flex align-items-center justify-content-between">
-                                <a class="small text-white stretched-link" href="#">View Details</a>
+                                <a class="small text-white stretched-link" href="{{route('admin.photography.index')}}">View Details</a>
                                 <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                             </div>
                         </div>

@@ -12,7 +12,7 @@
                                 <div class="text-danger">Please create an album category before creating album.</div>
                             @endif
                         </div>
-    
+
                         <div class="card-body">
                             <form action="{{ route('admin.category.store') }}" method="post">
                                 @csrf
@@ -20,29 +20,29 @@
                                     <label for="name">Album Category Title</label>
                                     <input type="text" class="form-control" id="name" name="name" required>
                                 </div>
-    
+
                                 <button type="submit" class="btn btn-info mt-2">Submit</button>
                             </form>
                         </div>
                     </div>
                 </div>
-    
+
                 <div class="col-md-6"> <!-- Added missing class -->
                     <div class="card shadow">
                         <div class="card-header">
                             <h1 class="card-title">Category List</h1>
                         </div>
                         <div class="card-body p-0">
-                            @forelse ($categories as $key => $category)
-                                <table class="table">
-                                    <thead>
-                                        <tr>
-                                            <th scope="col">#</th>
-                                            <th scope="col">Categories</th>
-                                            <th scope="col">Action</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">Categories</th>
+                                        <th scope="col">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @forelse ($categories as $key => $category)
                                         <tr>
                                             <td>{{ $key + 1 }}</td>
                                             <td>{{ $category->name }}</td>
@@ -63,11 +63,12 @@
                                                 </form>
                                             </td>
                                         </tr>
-                                    </tbody>
-                                </table>
-                            @empty
-                                <p class="text-center">No data found.</p>
-                            @endforelse
+                                    @empty
+                                        <p class="text-center">No data found.</p>
+                                    @endforelse
+                                </tbody>
+                            </table>
+
                         </div>
                     </div>
                 </div>
