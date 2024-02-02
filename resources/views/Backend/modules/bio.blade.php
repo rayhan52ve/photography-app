@@ -82,7 +82,7 @@
                                                 class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label full-size">
                                                 <input name="city" class="mdl-textfield__input" type="text"
                                                     value="{{ @$bio->city }}" id="floating-first-name">
-                                                <label class="mdl-textfield__label" for="floating-first-name">Address</label>
+                                                <label class="mdl-textfield__label" for="floating-first-name">City</label>
                                             </div>
                                         </div>
                                         <div class="col-md-12">
@@ -95,16 +95,15 @@
                                             </div>
                                         </div>
                                         <div class="col-md-12">
-                                            <div
-                                                class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label full-size">
-                                                <textarea class="mdl-textfield__input" id="floating-first-name" name="story" id="" rows="5">{{ @$bio->story }}</textarea>
-                                                <label class="mdl-textfield__label" for="floating-first-name">Your
-                                                    Story</label>
+                                            <div class="text-dark">
+                                                <label for="story" class="text-secondary">Your Story</label>
+                                                <textarea id="editor" rows="5" class="text-dark" name="story" placeholder="Your Story">{{ @$bio->story }}</textarea>
+
                                             </div>
                                         </div>
 
                                         <button type="submit"
-                                            class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button--colored-teal">
+                                            class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button--colored-teal mt-5">
                                             SAVE
                                         </button>
 
@@ -121,6 +120,11 @@
     </main>
 
     @push('css')
+        <style>
+            #editor {
+                min-height: 200px;
+            }
+        </style>
         <style>
             .image {
                 display: block;
@@ -155,6 +159,15 @@
     @endpush
 
     @push('js')
+        <script src="https://cdn.ckeditor.com/ckeditor5/41.0.0/classic/ckeditor.js"></script>
+        <script>
+            ClassicEditor
+                .create(document.querySelector('#editor'))
+                .catch(error => {
+                    console.error(error);
+                });
+        </script>
+
         <script>
             var imageInput = document.getElementById("imageInput");
             var profileImage = document.getElementById("profileImage");
