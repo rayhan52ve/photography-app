@@ -26,8 +26,8 @@
                             <div class="mdl-grid">
                                 <div class="mdl-cell mdl-cell--8-col-desktop mdl-cell--8-col-tablet mdl-cell--4-col-phone">
                                     <label class="image" for="imageInput">
-                                        <input type="file" id="imageInput" value="{{ old('photo') }}" name="photo"
-                                            class="form-control">
+                                        <input type="file" id="imageInput" value="{{ old('photo') }}" name="photo[]"
+                                            class="form-control" multiple>
                                         <img id="profileImage" src="{{ asset('asset/no-images.png') }}" width="100%"
                                             style="min-height: 250px;min-width:280px" class="rounded-top">
                                     </label>

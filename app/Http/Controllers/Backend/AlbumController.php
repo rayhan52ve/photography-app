@@ -15,7 +15,7 @@ class AlbumController extends Controller
      */
     public function index()
     {
-        $albums = Album::latest()->get();
+        $albums = Album::all();
         return view('Backend.modules.album.index', compact('albums'));
     }
 

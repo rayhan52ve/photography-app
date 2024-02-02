@@ -15,10 +15,10 @@
                 <div class="m-4">
                     <div class="row">
                         @forelse ($photographies as $key => $photography)
-                            <div class="col-md-3 mb-4 position-relative">
+                            <div class="col-md-4 mb-5 position-relative">
                                 <div class="card bg-dark text-white">
                                     <img src="{{ asset('uploads/photography/' . $photography->photo) }}"
-                                        style="height: 200px" class="card-img" alt="">
+                                        style="height: auto" class="card-img" alt="">
                                     <div class="card-img-overlay d-flex flex-column justify-content-between">
                                         <div class="position-absolute top-0 end-0 badge bg-success">{{ $key + 1 }}
                                         </div>

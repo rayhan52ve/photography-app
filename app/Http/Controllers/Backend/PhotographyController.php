@@ -15,7 +15,7 @@ class PhotographyController extends Controller
      */
     public function index()
     {
-        $photographies = Photography::latest()->get();
+        $photographies = Photography::all();
         return view('Backend.modules.photography.index', compact('photographies'));
     }
 
@@ -26,7 +26,7 @@ class PhotographyController extends Controller
     {
         $previousRoute = url()->previous();
         $albums = Album::all();
-        return view('Backend.modules.photography.create', compact('albums','previousRoute'));
+        return view('Backend.modules.photography.create', compact('albums', 'previousRoute'));
     }
 
     /**
@@ -34,22 +34,29 @@ class PhotographyController extends Controller
      */
     public function store(Request $request)
     {
-        $validatedData = $request->validate([
-            'photo' => 'required',
+        $request->validate([
+            'photo.*' => 'required',
             'album_id' => 'required',
         ]);
 
+        $imageData = [];
 
-        if ($request->hasFile('photo')) {
-            $file = $request->file('photo');
-            $extension = $file->getClientOriginalExtension();
-            $filename = time() . '.' . $extension;
-            $path = 'uploads/photography/';
-            $file->move(public_path($path), $filename);
-            $validatedData['photo'] = $filename;
+        if ($files = $request->file('photo')) {
+
+            foreach ($files as $file) {
+                $extension = $file->getClientOriginalExtension();
+                $filename = rand(1000, 9999) . '-' . time() . '.' . $extension;
+                $path = 'uploads/photography/';
+                $file->move(public_path($path), $filename);
+
+                $imageData[] = [
+                    'photo' => $filename,
+                    'album_id' => $request->album_id,
+                ];
+            }
         }
 
-        Photography::create($validatedData);
+        Photography::insert($imageData);
 
         session()->flash('msg', 'Photo Uploaded Successfully');
         session()->flash('cls', 'success');
@@ -72,7 +79,7 @@ class PhotographyController extends Controller
         $previousRoute = url()->previous();
         $albums = Album::all();
         $photography->load('album');
-        return view('Backend.modules.photography.edit',compact('photography','albums','previousRoute'));
+        return view('Backend.modules.photography.edit', compact('photography', 'albums', 'previousRoute'));
     }
 
     /**
