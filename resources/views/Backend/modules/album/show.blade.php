@@ -6,8 +6,7 @@
 
             <div class="mdl-cell mdl-cell--12-col-desktop mdl-cell--12-col-tablet mdl-cell--4-col-phone">
                 <div class="d-flex justify-content-between align-items-center p-3">
-                    <h3 style="display: inline-block; margin-right: 10px;">Album: {{$album->name}}</h3>
-                    <h3> <span class="badge text-success">Photos: {{$album->photographies->count()}}</span></h3>
+                    <h3 style="display: inline-block; margin-right: 10px;">Album: {{$album->name}} |<span class="badge text-success">Photos: {{$album->photographies->count()}}</span></h3>
                     <a class="btn btn-outline-info" href="{{ route('admin.photography.create') }}">Upload New Photos</a>
                 </div>
             </div>

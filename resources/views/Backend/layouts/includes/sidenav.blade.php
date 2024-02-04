@@ -4,44 +4,52 @@
         <div class="scroller" id="scroller">
             <div class="scroll__container" id="scroll__container">
                 <nav class="mdl-navigation">
-                    <a class="mdl-navigation__link mdl-navigation__link--current" href="{{ route('dashboard') }}">
+                    <a class="mdl-navigation__link {{ url()->current() == route('dashboard') ? 'mdl-navigation__link--current' : '' }}"
+                        href="{{ route('dashboard') }}">
                         <i class="material-icons" role="presentation">dashboard</i>
                         Dashboard
                     </a>
-                    <a class="mdl-navigation__link" href="{{ route('admin.bio.index') }}">
+                    <a class="mdl-navigation__link {{ url()->current() == route('admin.bio.index') ? 'mdl-navigation__link--current' : '' }}"
+                        href="{{ route('admin.bio.index') }}">
                         <i class="material-icons" role="presentation">person</i>
                         Bio
                     </a>
-                    <a class="mdl-navigation__link" href="{{ route('admin.category.index') }}">
+                    <a class="mdl-navigation__link {{ url()->current() == route('admin.category.index') ? 'mdl-navigation__link--current' : '' }}"
+                        href="{{ route('admin.category.index') }}">
                         <i class="material-icons" role="presentation">photo_camera</i>
                         Album Category
                     </a>
-                    <a class="mdl-navigation__link" href="{{ route('admin.album.index') }}">
+                    <a class="mdl-navigation__link {{ url()->current() == route('admin.album.index') ? 'mdl-navigation__link--current' : '' }}"
+                        href="{{ route('admin.album.index') }}">
                         <i class="material-icons" role="presentation">photo_camera</i>
                         Albums
                     </a>
-                    <a class="mdl-navigation__link" href="{{ route('admin.photography.index') }}">
+                    <a class="mdl-navigation__link {{ url()->current() == route('admin.photography.index') ? 'mdl-navigation__link--current' : '' }}"
+                        href="{{ route('admin.photography.index') }}">
                         <i class="material-icons" role="presentation">photo_camera</i>
                         Photos
                     </a>
                     <div class="sub-navigation">
-                        <a class="mdl-navigation__link">
+                        <a class="mdl-navigation__link {{ url()->current() == route('admin.web-info.index')||url()->current() == route('admin.hero.index') ? 'mdl-navigation__link--current' : '' }}">
                             <i class="material-icons">settings</i>
                             Settings
                             <i class="material-icons">keyboard_arrow_down</i>
                         </a>
                         <div class="mdl-navigation">
-                            <a class="mdl-navigation__link" href="{{ route('admin.hero.index') }}">
+                            <a class="mdl-navigation__link {{ url()->current() == route('admin.hero.index') ? 'mdl-navigation__link--current' : '' }}"
+                                href="{{ route('admin.hero.index') }}">
                                 Banners
                             </a>
                         </div>
                         <div class="mdl-navigation">
-                            <a class="mdl-navigation__link" href="{{ url('/profile') }}">
+                            <a class="mdl-navigation__link {{ url()->current() == url('/profile') ? 'mdl-navigation__link--current' : '' }}"
+                                href="{{ url('/profile') }}">
                                 My Account
                             </a>
                         </div>
                         <div class="mdl-navigation">
-                            <a class="mdl-navigation__link" href="{{ route('admin.web-info.index') }}">
+                            <a class="mdl-navigation__link {{ url()->current() == route('admin.web-info.index') ? 'mdl-navigation__link--current' : '' }}"
+                                href="{{ route('admin.web-info.index') }}">
                                 Website info
                             </a>
                         </div>
@@ -69,7 +77,8 @@
                     </div> --}}
                     <div class="mdl-layout-spacer"></div>
                     <hr>
-                    <a class="mdl-navigation__link" href="{{route('front.home')}}" target="blank_" title="Open new tab for frontend">
+                    <a class="mdl-navigation__link" href="{{ route('front.home') }}" target="blank_"
+                        title="Open new tab for frontend">
                         <i class="material-icons" role="presentation">home</i>
                         Go To Frontend
                     </a>
