@@ -15,7 +15,7 @@ class AlbumController extends Controller
      */
     public function index()
     {
-        $albums = Album::all();
+        $albums = Album::paginate(40);
         return view('Backend.modules.album.index', compact('albums'));
     }
 
@@ -61,7 +61,7 @@ class AlbumController extends Controller
      */
     public function show(Album $album)
     {
-        return view('Backend.modules.album.show',compact('album'));
+        return view('Backend.modules.album.show', compact('album'));
     }
 
     /**

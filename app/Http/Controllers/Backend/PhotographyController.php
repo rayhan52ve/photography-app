@@ -15,7 +15,7 @@ class PhotographyController extends Controller
      */
     public function index()
     {
-        $photographies = Photography::all();
+        $photographies = Photography::latest()->paginate(60);
         return view('Backend.modules.photography.index', compact('photographies'));
     }
 

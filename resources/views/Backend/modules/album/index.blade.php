@@ -52,6 +52,9 @@
                                 <h3 class="text-center text-danger">No Album Created Yet</h3>
                             </div>
                         @endforelse
+                        <div class="d-flex justify-content-center">
+                            {{ $albums->links() }}
+                        </div>
                     </div>
                 </div>
             </div>

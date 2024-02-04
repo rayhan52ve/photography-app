@@ -4,7 +4,7 @@
     <main class="mdl-layout__content mdl-color--grey-100">
         <div class="mdl-card mdl-shadow--2dp employer-form" action="#">
             <div class="mdl-card__title">
-                <h2>Create Album Category</h2>
+                <h2>Edit Album Category</h2>
             </div>
 
             <div class="mdl-card__supporting-text">

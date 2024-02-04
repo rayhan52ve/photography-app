@@ -7,6 +7,7 @@
             <div class="mdl-cell mdl-cell--12-col-desktop mdl-cell--12-col-tablet mdl-cell--4-col-phone">
                 <div class="d-flex justify-content-between align-items-center p-3">
                     <h3 style="display: inline-block; margin-right: 10px;">Album: {{$album->name}}</h3>
+                    <h3> <span class="badge text-success">Photos: {{$album->photographies->count()}}</span></h3>
                     <a class="btn btn-outline-info" href="{{ route('admin.photography.create') }}">Upload New Photos</a>
                 </div>
             </div>
@@ -17,7 +18,7 @@
                         @forelse ($album->photographies as $key => $photography)
                             <div class="col-md-3 mb-4 position-relative">
                                 <div class="card bg-dark text-white">
-                                    <img src="{{ asset('uploads/photography/' . $photography->photo) }}" style="height: 200px"
+                                    <img src="{{ asset('uploads/photography/' . $photography->photo) }}" style="height: auto"
                                         class="card-img" alt="">
                                     <div class="card-img-overlay d-flex flex-column justify-content-between">
                                         <div class="position-absolute top-0 end-0 badge bg-success">{{ $key + 1 }}
@@ -45,6 +46,9 @@
                                 <h3 class="text-center text-danger">This photography has no photo Yet</h3>
                             </div>
                         @endforelse
+                        {{-- <div class="d-flex justify-content-center">
+                            {{ $album->photographies()->paginate(5)->links() }}
+                        </div>                         --}}
                     </div>
                 </div>
             </div>
