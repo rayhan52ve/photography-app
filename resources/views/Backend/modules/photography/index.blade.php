@@ -7,7 +7,7 @@
             <div class="mdl-cell mdl-cell--12-col-desktop mdl-cell--12-col-tablet mdl-cell--4-col-phone">
                 <div class="d-flex justify-content-between align-items-center p-3">
                     <h3 style="display: inline-block; margin-right: 10px;">All Photos | <span class="badge text-success">Page: {{$photographies->currentPage()}}</span>|
-                        <span class="badge text-success">Photos: {{$photographies->count()}}</span></h3>
+                        <span class="badge text-success">Photos: {{$photographiesCount}}</span></h3>
                     <a class="btn btn-outline-info" href="{{ route('admin.photography.create') }}">Upload New Photos</a>
                 </div>
             </div>
@@ -16,7 +16,7 @@
                 <div class="m-4">
                     <div class="row">
                         @forelse ($photographies as $key => $photography)
-                            <div class="col-md-4 mb-5 position-relative">
+                            <div class="col-md-4 mb-3 position-relative">
                                 <div class="card bg-dark text-white">
                                     <img src="{{ asset('uploads/photography/' . $photography->photo) }}"
                                         style="height: auto" class="card-img" alt="">

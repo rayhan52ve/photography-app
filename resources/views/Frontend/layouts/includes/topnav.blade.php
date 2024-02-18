@@ -6,7 +6,7 @@
                 <!-- Uncomment the line below if you also wish to use an image logo -->
                 <img src="/uploads/websiteinfo/logo/{{ @$websiteInfo->logo }}" alt="">
                 <h1>{{ @$websiteInfo->title }}</h1>
-                <i class="bi bi-camera mx-2"></i>
+                {{-- <i class="bi bi-camera mx-2"></i> --}}
 
             </a>
 
@@ -25,10 +25,18 @@
             </nav><!-- .navbar -->
 
             <div class="header-social-links">
-                <a href="{{ @$websiteInfo->tweeter }}" class="twitter"><i class="bi bi-twitter"></i></a>
-                <a href="{{ @$websiteInfo->facebook }}" class="facebook"><i class="bi bi-facebook"></i></a>
-                <a href="{{ @$websiteInfo->instagram }}" class="instagram"><i class="bi bi-instagram"></i></a>
-                <a href="{{ @$websiteInfo->linkedin }}" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
+                @if (@$websiteInfo->tweeter)
+                    <a href="{{ $websiteInfo->tweeter }}" class="twitter"><i class="bi bi-twitter"></i></a>
+                @endif
+                @if (@$websiteInfo->facebook)
+                    <a href="{{ @$websiteInfo->facebook }}" class="facebook"><i class="bi bi-facebook"></i></a>
+                @endif
+                @if (@$websiteInfo->instagram)
+                    <a href="{{ @$websiteInfo->instagram }}" class="instagram"><i class="bi bi-instagram"></i></a>
+                @endif
+                @if (@$websiteInfo->linkedin)
+                    <a href="{{ @$websiteInfo->linkedin }}" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
+                @endif
             </div>
             <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
             <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
